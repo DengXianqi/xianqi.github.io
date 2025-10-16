@@ -1,0 +1,84 @@
+/* Shared styles across all pages — explainable, well-organized.
+main { min-height: 60vh; }
+footer { color: var(--muted); }
+ul, ol { padding-left: 1.25rem; }
+li { margin: .25rem 0; }
+figure { margin: 0; }
+figcaption { color: var(--muted); font-size: .875rem; }
+img { max-width: 100%; height: auto; display: block; }
+blockquote { background: var(--surface-1); border-left: .25rem solid var(--accent-1); padding: 1rem; border-radius: .5rem; }
+code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; }
+button { cursor: pointer; }
+
+
+/* ID selector example */
+#year { font-variant-numeric: tabular-nums; }
+
+
+/* Accessibility helpers */
+.skip-link { position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden; }
+.skip-link:focus { position: static; width: auto; height: auto; padding: .5rem .75rem; background: #ffffff; color: #000; border-radius: .5rem; }
+
+
+:focus-visible { outline: 3px solid var(--accent-2); outline-offset: 3px; border-radius: .5rem; }
+
+
+/* Bootstrap theming nudges (override where useful) */
+.nav-link { color: var(--text); }
+.nav-link.active, .nav-pills .nav-link.active { background: var(--accent-1); }
+.navbar-brand { color: #fff; }
+
+
+/* Reusable utility classes (>=3 classes) */
+.brand-accent { color: var(--accent-1); }
+.card-outline { border: 1px solid var(--outline); }
+.btn-primary-custom { background: var(--accent-1); border-color: var(--accent-1); }
+.btn-primary-custom:hover { filter: brightness(1.1); }
+
+
+/* Hover / transform effects (>=3) */
+.hover-lift { transition: transform .25s ease, box-shadow .25s ease; }
+.hover-lift:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,.25); }
+
+
+.img-zoom { transition: transform .4s ease; }
+.img-zoom:hover { transform: scale(1.03); }
+
+
+.hover-underline { background-image: linear-gradient(currentColor, currentColor); background-position: 0 100%; background-repeat: no-repeat; background-size: 0 2px; transition: background-size .25s ease; }
+.hover-underline:hover { background-size: 100% 2px; }
+
+
+/* Subtle tilt effect */
+.tilt-card { transform: perspective(1000px) rotateX(0) rotateY(0); transition: transform .3s ease; }
+.tilt-card:hover { transform: perspective(1000px) rotateX(2deg) rotateY(-2deg); }
+
+
+/* Looping animation (site-wide) */
+@keyframes shimmer {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+/* Apply animation to subtle elements, not content */
+header.bg-body { background: linear-gradient(90deg, #0f1117, #121520, #0f1117); background-size: 200% 200%; animation: shimmer 24s linear infinite; }
+
+
+/* Gallery Grid */
+.grid-gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; }
+.grid-gallery .gallery-item { background: var(--surface-1); border: 1px solid var(--outline-weak); border-radius: .75rem; overflow: hidden; }
+.grid-gallery .gallery-item img { aspect-ratio: 4 / 3; object-fit: cover; }
+.grid-gallery .gallery-item figcaption { padding: .5rem .75rem; }
+
+
+/* Provide good defaults for cards on dark background */
+.card { background: var(--surface-1); border: 1px solid var(--outline-weak); border-radius: var(--radius-xl); }
+.card .card-title { color: #fff; }
+
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
