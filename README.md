@@ -2,11 +2,11 @@
 
 
 ## Live site
-Add your GitHub Pages URL here (e.g., https://<your-username>.github.io/project1/)
+Add your GitHub Pages URL here (e.g., https://xianqi.github.io/)
 
 
 ## Repo
-Link to this repository (public): https://github.com/<your-username>/project1
+Link to this repository (public): https://github.com/DengXianqi/xianqi.github.io
 
 
 ## What’s inside
@@ -39,4 +39,5 @@ Link to this repository (public): https://github.com/<your-username>/project1
 
 ## Attribution
 - Bootstrap © Twitter, Inc. and The Bootstrap Authors. Licensed under MIT.
+
 - Placeholder images should be replaced with your own; if you keep stock images, include their source links here.
