@@ -34,10 +34,11 @@ Link to this repository (public): https://github.com/DengXianqi/xianqi.github.io
 4. In GitHub, go to **Settings → Pages**.
 5. Under **Build and deployment**, set **Source** to **Deploy from a branch**.
 6. Choose the **main** branch and **/root** folder, save.
-7. Wait for the green check. Your site will appear at `https://<username>.github.io/<repo>/`.
+7. Wait for the green check. Your site will appear at `https://xianqi.github.io/`.
 
 
 ## Attribution
 - Bootstrap © Twitter, Inc. and The Bootstrap Authors. Licensed under MIT.
 
 - Placeholder images should be replaced with your own; if you keep stock images, include their source links here.
+
