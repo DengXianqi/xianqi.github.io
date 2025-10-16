@@ -67,10 +67,32 @@ header.bg-body { background: linear-gradient(90deg, #0f1117, #121520, #0f1117); 
 
 
 /* Gallery Grid */
-.grid-gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; }
-.grid-gallery .gallery-item { background: var(--surface-1); border: 1px solid var(--outline-weak); border-radius: .75rem; overflow: hidden; }
-.grid-gallery .gallery-item img { aspect-ratio: 4 / 3; object-fit: cover; }
-.grid-gallery .gallery-item figcaption { padding: .5rem .75rem; }
+.grid-gallery {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+gap: 1rem;
+}
+.grid-gallery .gallery-item {
+background: var(--surface-1);
+border: 1px solid var(--outline-weak);
+border-radius: .75rem;
+overflow: hidden;
+}
+/* NEW: image wrapper keeps a fixed aspect, but shows the whole image */
+.grid-gallery .img-box {
+aspect-ratio: 4 / 3; /* uniform tile ratio */
+display: grid;
+place-items: center; /* center the img */
+background: var(--surface-2); /* subtle letterbox color */
+}
+.grid-gallery .img-box img {
+width: 100%;
+height: 100%;
+object-fit: contain; /* show entire image without cropping */
+}
+.grid-gallery .gallery-item figcaption {
+padding: .5rem .75rem;
+}
 
 
 /* Provide good defaults for cards on dark background */
@@ -81,4 +103,5 @@ header.bg-body { background: linear-gradient(90deg, #0f1117, #121520, #0f1117); 
 /* Respect reduced motion */
 @media (prefers-reduced-motion: reduce) {
     * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+
 }
